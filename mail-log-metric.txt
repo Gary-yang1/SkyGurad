@@ -1,0 +1,8 @@
+站点地址：
+https://184.41.4.75:8447
+
+指标接口（请作为一整行粘贴到“编辑站点 → 指标接口”）：
+POST /webManager/pages/swg/mail/log | {"seniorFilter":{"receiveTime":{"timeType":"LAST_PAST_N_DAY","lastPastDay":3,"timePointOn":false,"includeLower":true,"includeUpper":true},"analyseResult":{"value":[7]},"direction":{"value":[3]}},"pageContext":{"pageIndex":1,"pageSize":20}}
+
+含义：最近 3 天、异常邮件、出向；每次请求第 1 页，每页 20 条。
+关键总量：响应 data.pageContext.totalSize。
