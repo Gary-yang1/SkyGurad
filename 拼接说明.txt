@@ -1,0 +1,28 @@
+department-status-tracker.jar 分片说明
+=====================================
+
+共有4个分片，必须全部放在同一个目录中：
+
+1. department-status-tracker.jar.part-a
+2. department-status-tracker.jar.part-b
+3. department-status-tracker.jar.part-c
+4. department-status-tracker.jar.part-d
+
+Windows：双击“内网拼接.bat”。
+
+也可以在 Windows 命令行执行：
+
+copy /b department-status-tracker.jar.part-a+department-status-tracker.jar.part-b+department-status-tracker.jar.part-c+department-status-tracker.jar.part-d department-status-tracker.jar
+
+拼接后的文件名：department-status-tracker.jar
+
+原文件大小：21777812 字节
+SHA-256：5fff27544fbe259c3ceb51ee323da5a08a2f01c0a1d4b193372d8b5c04c9aa25
+
+拼接后请使用 certutil 校验：
+
+certutil -hashfile department-status-tracker.jar SHA256
+
+哈希值完全一致后运行：
+
+java -jar department-status-tracker.jar
